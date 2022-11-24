@@ -1,0 +1,35 @@
+﻿<Window x:Class="ATMApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ATMApp"
+        mc:Ignorable="d"
+        Title="A-Lags BankApp" Height="450" Width="800" Background="AliceBlue">
+    <Border Margin="10">
+        <StackPanel>
+            <TextBlock Text="A-LAGS BANK" FontSize="50" Padding="10" TextAlignment="Center" 
+                       Background="DarkGreen" FontWeight="Bold" Foreground="White"/>
+            <TextBlock Text="LOGIN" FontSize="20" Padding="10" TextAlignment="Center" />
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBlock x:Name="accountNumber" Text="ACCOUNT NUM:" FontSize="20" TextAlignment="Right" Margin="10 10 20 10" />
+                <TextBlock x:Name="pin" Text="PIN CODE:" Grid.Row="1" FontSize="20" TextAlignment="Right" Margin="10 10 20 10" />
+                <TextBox x:Name="userInputAccountNumber" Grid.Column="1" Grid.Row="0" FontSize="30" TextAlignment="Left" />
+                <PasswordBox x:Name="userInputPincodeNumber" Grid.Column="1" Grid.Row="1" FontSize="30"/>
+                <Button x:Name="loginButton" Content="Login" Click="Button_Click" Grid.Row="2" Grid.ColumnSpan="3" 
+                        HorizontalAlignment="Center" FontSize="50" Margin="20"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
