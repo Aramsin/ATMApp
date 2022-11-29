@@ -4,9 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ATMApp.Views"
-        mc:Ignorable="d"
-        Title="ShellView" Height="450" Width="800">
+        mc:Ignorable="d" FontSize="18"
+        Title="ShellView" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <!-- Row 1 -->
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="A-LAGETS BANK" />
+
+        <!-- Row 2 -->
+        <ComboBox Grid.Row="2" Grid.Column="1" x:Name="Users"
+                  SelectedItem="{Binding Path=SelectedUser, Mode=OneWayToSource}"
+                  DisplayMemberPath="username" />
+
+        <!-- Row 3 -->
+        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="password" />
         
+        <!-- Row 4 -->
+        <Button x:Name="LoadLoggedIn" Grid.Row="4" Grid.Column="1" 
+                Content="Login" />
+        
+        <!-- Row 5 -->
+        <ContentControl Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="5"
+                        x:Name="ActiveItem" />
     </Grid>
 </Window>
