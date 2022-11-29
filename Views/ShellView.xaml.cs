@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace ATMApp
+namespace ATMApp.Views
 {
     /// <summary>
-    /// Interaction logic for LoggedIn.xaml
+    /// Interaction logic for ShellView.xaml
     /// </summary>
-    public partial class LoggedIn : Window
+    public partial class ShellView : Window
     {
-        public LoggedIn()
+        public ShellView()
         {
             InitializeComponent();
         }
