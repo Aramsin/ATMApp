@@ -20,7 +20,9 @@ namespace ATMApp
             }
             else
             {
-                MessageBox.Show("You are logged in!");
+                var LoggedInWindow = new LoggedIn();
+                LoggedInWindow.Show();
+                this.Close();
             }
         }
     }
