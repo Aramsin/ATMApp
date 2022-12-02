@@ -10,18 +10,18 @@ namespace ATMApp.ViewModels
 {
     public class ShellViewModel : Conductor<object>
     {
-		private int _username;
+		private string _username;
 		private string _password;
 		private UserModel _selectedUser;
 		private BindableCollection<UserModel> _users = new BindableCollection<UserModel>();
 
 		public ShellViewModel()
 		{
-			Users.Add(new UserModel { username = "admin", password = "password" });
-			Users.Add(new UserModel { username = "latti", password = "test123" });
+			Users.Add(new UserModel { Username = "admin", Password = "password" });
+			Users.Add(new UserModel { Username = "latti", Password = "test123" });
 		}
 
-		public int Username
+		public string Username
 		{
 			get 
 			{ 
@@ -31,7 +31,8 @@ namespace ATMApp.ViewModels
 			{ 
 				_username = value; 
 				NotifyOfPropertyChange(() => Username);
-			}
+                NotifyOfPropertyChange(() => CanLogin);
+            }
 		}
 
 		public string Password
@@ -44,6 +45,7 @@ namespace ATMApp.ViewModels
 			{ 
 				_password = value; 
 				NotifyOfPropertyChange(() => Password);
+				NotifyOfPropertyChange(() => CanLogin);
 			}
 		}
 
@@ -63,12 +65,31 @@ namespace ATMApp.ViewModels
 			}
 		}
 
-		//public bool CanLogin(string username, string password) => 
-		//	!String.IsNullOrWhiteSpace(username) || !String.IsNullOrWhiteSpace(password);
+		public bool CanLogin
+		{
+			get
+			{
+				bool output = false;
+				// Username? is a not null check
+				if (Username?.Length > 0 && Password?.Length > 0)
+				{
+					output = true;
+				}
+
+				return output;
+			}
+		}
 
 		public void LoadLoggedIn()
 		{
-			ActivateItem(new LoggedInViewModel());
+			foreach (var user in Users)
+			{
+				if (user.Username == Username && user.Password == Password)
+				{
+                    ActivateItem(new LoggedInViewModel());
+                }
+			}
+            
 		}
 		
 		public void LoadDeposit()

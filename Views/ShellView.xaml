@@ -28,13 +28,17 @@
         <!-- Row 1 -->
         <TextBlock Grid.Row="1" Grid.Column="1" Text="A-LAGETS BANK" />
 
-        <!-- Row 2 -->
+        <!-- Row 2 ComboBox
         <ComboBox Grid.Row="2" Grid.Column="1" x:Name="Users"
                   SelectedItem="{Binding Path=SelectedUser, Mode=OneWayToSource}"
-                  DisplayMemberPath="username" />
+                  DisplayMemberPath="Username" />
+        -->
+        <!-- Row 2 Textbox -->
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="Username" />
+
 
         <!-- Row 3 -->
-        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="password" />
+        <PasswordBox Grid.Row="3" Grid.Column="1" x:Name="Password" />
         
         <!-- Row 4 -->
         <Button x:Name="LoadLoggedIn" Grid.Row="4" Grid.Column="1" 
