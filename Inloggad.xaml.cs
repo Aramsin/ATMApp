@@ -13,11 +13,12 @@ namespace ATMApp
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
+
         private void Deposit_Click(object sender, RoutedEventArgs e)
         {
             var Deposit = new Deposit();
             Deposit.Show();
-            this.Hide();
+            Close();
         }
 
         private void Withdraw_Click(object sender, RoutedEventArgs e)
@@ -35,7 +36,6 @@ namespace ATMApp
             var MainWindow = new MainWindow();
             this.Close();
             MainWindow.Show();
-
         }
     }
 }

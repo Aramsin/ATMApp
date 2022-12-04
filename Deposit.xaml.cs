@@ -19,6 +19,10 @@ namespace ATMApp
             var Inloggad = new Inloggad();
             this.Close();
             Inloggad.Show();
+        }
+
+        private void ConfirmDepositBtn_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }
