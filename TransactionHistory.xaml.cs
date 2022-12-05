@@ -30,7 +30,7 @@ namespace ATMApp
             Transaction newTransaction = new Transaction(1, 100, true, new DateTime());
             TransactionList.Add(newTransaction);
 
-            DataContext = this;
+            allTransactions.ItemsSource = TransactionList;
         }
     }
 }

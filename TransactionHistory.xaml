@@ -21,16 +21,16 @@
                    FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"
                    Margin="0 30"/>
 
-        <ListView ItemsSource="{Binding Source=TransactionList}" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+        <ListView x:Name="allTransactions" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
 
             <ListView.View>
 
                 <GridView>
 
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=transactionID}" Header="ID" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=amount}" Header="Belopp" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=isDeposit}" Header="Typ" Width="100"/>
-                    <GridViewColumn DisplayMemberBinding="{Binding Path=dateTime}" Header="Datum" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding transactionID}" Header="ID" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding amount}" Header="Belopp" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding isDeposit}" Header="Typ" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding dateTime}" Header="Datum" Width="100"/>
 
                 </GridView>
 
