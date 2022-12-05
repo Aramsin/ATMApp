@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ATMApp"
         mc:Ignorable="d"
-        Title="Bank" Height="450" Width="800" Background="AliceBlue">
+        Title="Bank" Height="450" Width="800" Background="AliceBlue" WindowStartupLocation="CenterScreen">
     <Border Margin="10">
         <StackPanel>
             <TextBlock Text="A-LAGS BANK" FontSize="50" Padding="10" TextAlignment="Center" 

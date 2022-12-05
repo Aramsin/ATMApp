@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ATMApp"
         mc:Ignorable="d"
-        Title="Deposit" Height="450" Width="800" HorizontalAlignment="Center" Background="AliceBlue">
+        Title="Deposit" Height="450" Width="800" HorizontalAlignment="Center" 
+        Background="AliceBlue" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -35,8 +36,6 @@
                 Height="50" Width="60" >
             <Image Source="Resources/return.jpg" />
         </Button>
-        <TextBox x:Name="BalanceTextBlock" Grid.Column="1" Grid.Row="2" Margin="10 30 10 50" IsReadOnly="True" />
-
-
+        <TextBlock x:Name="Balance" Background="LightBlue" Grid.Column="1" Grid.Row="2" Margin="10 30 10 50"  />
     </Grid>
 </Window>

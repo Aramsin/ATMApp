@@ -7,10 +7,15 @@ namespace ATMApp
     /// </summary>
     public partial class Inloggad : Window
     {
+
+        Customer _customer;
+        public void SetCustomer(Customer customer)
+        {
+            _customer = customer;
+        }
         public Inloggad()
         {
             InitializeComponent();
-            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
 

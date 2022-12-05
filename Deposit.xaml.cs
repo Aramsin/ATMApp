@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 
-
 namespace ATMApp
 {
     /// <summary>
@@ -11,7 +10,6 @@ namespace ATMApp
         public Deposit()
         {
             InitializeComponent();
-            WindowStartupLocation = WindowStartupLocation.CenterScreen;
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)

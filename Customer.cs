@@ -11,7 +11,7 @@ namespace ATMApp
 
         private int accountNr;
 
-        private double balance;
+        private double balance { get; set; }
 
         public List<Customer> customer = new List<Customer>();
         public List<Customer> CustomerList()
@@ -25,6 +25,8 @@ namespace ATMApp
         public string? GetName() { return name; }
         public int GetPinCode() { return pinCode; }
         public double GetBalance() { return balance; }
+
+
 
 
         /*public Customer(string name, int accountNr, int pinCode, decimal balance)
