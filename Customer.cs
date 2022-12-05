@@ -1,6 +1,6 @@
 ﻿namespace ATMApp
 {
-    internal class Customer
+    public class Customer
     {
 
         private string name;

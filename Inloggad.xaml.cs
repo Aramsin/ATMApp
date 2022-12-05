@@ -36,6 +36,13 @@ namespace ATMApp
             this.Close();
             MainWindow.Show();
 
+        }        
+        private void TransactionHistory_Click(object sender, RoutedEventArgs e)
+        {
+            var TransactionHistory = new TransactionHistory();
+            this.Close();
+            TransactionHistory.Show();
+
         }
     }
 }
