@@ -22,9 +22,7 @@ namespace ATMApp
         public List<Transaction> TransactionList { get; set; }
         public TransactionHistory()
         {
-
             InitializeComponent();
-
 
             TransactionList = new List<Transaction>();
             Transaction newTransaction = new Transaction(1, 100, true, new DateTime());

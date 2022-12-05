@@ -7,6 +7,11 @@ namespace ATMApp
     /// </summary>
     public partial class Inloggad : Window
     {
+        Customer _customer;
+        public void SetCustomer(Customer customer)
+        {
+            _customer = customer;
+        }
         public Inloggad()
         {
             InitializeComponent();
@@ -15,7 +20,7 @@ namespace ATMApp
 
         private void Deposit_Click(object sender, RoutedEventArgs e)
         {
-            var Deposit = new Deposit();
+            var Deposit = new Deposit(_customer);
             Deposit.Show();
             this.Hide();
         }

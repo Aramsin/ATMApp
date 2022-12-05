@@ -8,10 +8,21 @@ namespace ATMApp
     /// </summary>
     public partial class Deposit : Window
     {
-        public Deposit()
+        Customer _customer;
+        public void SetCustomer(Customer customer)
+        {
+            _customer = customer;
+        }
+        public Deposit(Customer customer)
         {
             InitializeComponent();
-            WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            AccountBalance.Text = GetAccountBalance(customer);
+        }
+
+        private string GetAccountBalance(Customer customer)
+        {
+            var result = customer.GetBalance().ToString();
+            return result;
         }
 
         private void Return_Click(object sender, RoutedEventArgs e)
@@ -19,7 +30,12 @@ namespace ATMApp
             var Inloggad = new Inloggad();
             this.Close();
             Inloggad.Show();
+        }
+
+        private void ConfirmDepositBtn_Click(object sender, RoutedEventArgs e)
+        {
 
         }
+
     }
 }
