@@ -7,6 +7,11 @@ namespace ATMApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        Customer _customer;
+        public void SetCustomer(Customer customer)
+        {
+            _customer = customer;
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -19,10 +24,10 @@ namespace ATMApp
                 if (userInputAccountNumber.Text == c.GetAccountNr().ToString() && userInputPincodeNumber.Password == c.GetPinCode().ToString())
                 {
                     MessageBox.Show("You are logged in " + c.GetName());
-                    var inloggad = new Inloggad();
+                    var inloggad = new Inloggad(_customer);
                     inloggad.SetCustomer(c);
                     inloggad.Show();
-                    Close();
+                    Hide();
                     return;
                 }
 

@@ -21,7 +21,7 @@
                    FontSize="40" FontWeight="Bold" HorizontalAlignment="Center"
                    Margin="0 30"/>
 
-        <ListView x:Name="allTransactions" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2">
+        <ListView x:Name="allTransactions" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Margin="10 10 10 10">
 
             <ListView.View>
 
@@ -31,6 +31,8 @@
                     <GridViewColumn DisplayMemberBinding="{Binding amount}" Header="Belopp" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding isDeposit}" Header="Typ" Width="100"/>
                     <GridViewColumn DisplayMemberBinding="{Binding dateTime}" Header="Datum" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding accountReciever}" Header="Mottagare" Width="100"/>
+                    <GridViewColumn DisplayMemberBinding="{Binding accountSender}" Header="Avsändare" Width="100"/>
 
                 </GridView>
 

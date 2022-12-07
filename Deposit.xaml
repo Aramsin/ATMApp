@@ -29,26 +29,20 @@
                    Margin="10 40 20 10"/>
         <TextBox x:Name="DepositAmount" Grid.Column="1" Grid.Row="1" Margin="10 30 10 50" 
                   TextAlignment="Left" FontSize="30" />
-        <!--
-        <ItemsControl x:Name="AccountBalance">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <TextBox Text="{Binding Path=Message}" />
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-        -->
-        
-        
+
         <TextBox x:Name="AccountBalance" Grid.Column="1" Grid.Row="2" Margin="10 30 10 50"
                  TextAlignment="Left" FontSize="30" />
-        
+
+        <Button x:Name="ConfirmDepositBtn" Content="OK" Grid.Column="2" Grid.Row="1" 
+                Margin="70 35 100 55" FontSize="30" Click="ConfirmDepositBtn_Click" />
+
         <Button x:Name="Return" Click="Return_Click" Grid.Column="2" Grid.Row="2"
                 Height="50" Width="60" >
             <Image Source="Resources/return.jpg"/>
         </Button>
+        <!--
         <Image Grid.Column="2"  Grid.Row ="1"  Source="/Resources/bank.png" Stretch="Fill"/>
-
+        -->
 
     </Grid>
 </Window>

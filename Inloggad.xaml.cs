@@ -7,15 +7,18 @@ namespace ATMApp
     /// </summary>
     public partial class Inloggad : Window
     {
-        Customer _customer;
+        Customer _customer { get; set; }
+
         public void SetCustomer(Customer customer)
         {
             _customer = customer;
         }
-        public Inloggad()
+        public Inloggad(Customer customer)
         {
+            _customer = customer;
             InitializeComponent();
             WindowStartupLocation = WindowStartupLocation.CenterScreen;
+            //this._customer = customer;
         }
 
         private void Deposit_Click(object sender, RoutedEventArgs e)

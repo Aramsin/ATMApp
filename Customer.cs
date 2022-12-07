@@ -25,6 +25,10 @@ namespace ATMApp
         public string? GetName() { return name; }
         public int GetPinCode() { return pinCode; }
         public double GetBalance() { return balance; }
+        public void SetBalance(double balance)
+        {
+            this.balance = balance;
+        }
 
 
 
