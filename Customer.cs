@@ -1,30 +1,37 @@
-﻿namespace ATMApp
+﻿using System.Collections.Generic;
+
+namespace ATMApp
 {
-    internal class Customer
+    public class Customer
     {
 
-        private string name;
-        private int pinCode;
-        private int accountNr;
-        private double balance;
+        public string? name { get; set; } 
 
+        public int pinCode { get; set; }
 
-        public int GetAccountNr()
+        public int accountNr { get; set; }
+
+        public double balance { get; set; }
+
+        public List<Customer> customer = new List<Customer>();
+        public List<Customer> CustomerList()
         {
-            return accountNr;
+            customer.Add(new Customer() { name = "Poor Peggy", accountNr = 999, pinCode = 999, balance = 1000 });
+            customer.Add(new Customer() { name = "Sleepy Joe", accountNr = 888, pinCode = 888, balance = 43000 });
+            customer.Add(new Customer() { name = "Lucky Luke", accountNr = 777, pinCode = 777, balance = 155210.70 });
+            customer.Add(new Customer() { name = "Luci DeVol", accountNr = 666, pinCode = 666, balance = 6666666 });
+            return customer;
         }
-
-        public int GetPinCode()
+        public int GetAccountNr() { return accountNr; }
+        public string? GetName() { return name; }
+        public int GetPinCode() { return pinCode; }
+        public double GetBalance() { return balance; }
+        public void SetBalance(double balance)
         {
-            return pinCode;
-        }
-
-        public Customer(string name, int accountNr, int pinCode, double balance)
-        {
-            this.name = name;
-            this.pinCode = pinCode;
-            this.accountNr = accountNr;
             this.balance = balance;
         }
+
+
+
     }
 }

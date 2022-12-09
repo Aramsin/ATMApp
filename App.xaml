@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:ATMApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+
     </Application.Resources>
 </Application>
